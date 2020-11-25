@@ -1,10 +1,36 @@
 <template>
     <div>
-
+        <img src="/../media/img/logo.jpg" class="rounded-circle mx-auto d-block m-4 img">
+        <br>
+        <form action="">
+        <div class="form-group">
+        <label for="email" >Email address:</label>
+        <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+        <label for="pwd" >Password:</label>
+        <input type="password" class="form-control" id="pwd">
+        </div>
+        <button type="submit" class="btn btn-success btn-lg btn-block text-decoration-none"><router-link class="nav-link" to="/home"></router-link>Submit</button>
+        </form>
     </div>
 </template>
 <script>
+
 export default {
+    data(){
+        return{
+            ingreso:''
+        }
+    },
+    methods:{
+        login(){
+            this.ingreso=true;
+        },
+        form(){
+            this.$emit('singin',this.login());
+        }
+    }
     
 }
 </script>
