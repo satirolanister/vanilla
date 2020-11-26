@@ -2,7 +2,7 @@
     <div>
         <img src="/../media/img/logo.jpg" class="rounded-circle mx-auto d-block m-4 img">
         <br>
-        <form action="">
+        <form action="" @submit.prevent="login()">
         <div class="form-group">
         <label for="email" >Email address:</label>
         <input type="email" class="form-control" id="email">
@@ -25,10 +25,8 @@ export default {
     },
     methods:{
         login(){
-            this.ingreso=true;
-        },
-        form(){
-            this.$emit('singin',this.login());
+            this.ingreso=false;
+            this.$emit('singin',this.ingreso);
         }
     }
     
