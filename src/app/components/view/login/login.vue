@@ -11,7 +11,7 @@
         <label for="pwd" >Password:</label>
         <input type="password" class="form-control" id="pwd">
         </div>
-        <button type="submit" class="btn btn-success btn-lg btn-block text-decoration-none"><router-link class="nav-link" to="/home"></router-link>Submit</button>
+        <button type="submit" class="btn btn-success btn-lg btn-block text-decoration-none">Submit</button>
         </form>
     </div>
 </template>

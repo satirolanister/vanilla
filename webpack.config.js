@@ -1,4 +1,5 @@
-const {VueLoaderPlugin}=require('vue-loader');
+const {VueLoaderPlugin, }=require('vue-loader');
+const css = require('css-loader');
 module.exports = {
     devServer: {
         liveReload: true
@@ -22,6 +23,10 @@ module.exports = {
             {
                 test: /\.vue$/,
                 loader: 'vue-loader'
+            },
+            {
+                test: /\.css$/i,
+                use: ["css-loader"],
             }
         ]
     },
