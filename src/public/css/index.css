@@ -4,13 +4,15 @@
 }
 .body-app{
     display: flex;
+    height: 100vh;
 }
 footer {
+    position: fixed; 
    width: 100%;
-   position: absolute;
    background: gray;
    color: white;
    justify-content: center;
+   bottom: 0;
       
 }
 #logo{
@@ -41,4 +43,7 @@ video{
 
 .text{
    height: 50%;
+}
+.user{
+    width: 100%;
 }

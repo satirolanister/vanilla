@@ -11,7 +11,7 @@
         <label for="pwd" >Password:</label>
         <input type="password" class="form-control" id="pwd">
         </div>
-        <button type="submit" class="btn btn-success btn-lg btn-block text-decoration-none">Submit</button>
+        <button type="submit" class="btn btn-success btn-lg btn-block text-decoration-none">Ingresar</button>
         </form>
     </div>
 </template>
@@ -32,3 +32,4 @@ export default {
     
 }
 </script>
+
