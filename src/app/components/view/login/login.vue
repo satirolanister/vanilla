@@ -27,6 +27,7 @@ export default {
         login(){
             this.ingreso=false;
             this.$emit('singin',this.ingreso);
+            console.log('login', this.ingreso)
         }
     }
     

@@ -2,48 +2,53 @@
     margin: 0;
     padding: 0;
 }
-.body-app{
+
+.body-app {
     display: flex;
     height: 100vh;
 }
+
 footer {
-    position: fixed; 
-   width: 100%;
-   background: gray;
-   color: white;
-   justify-content: center;
-   bottom: 0;
-      
-}
-#logo{
-    width: 25%;
+    position: fixed;
+    width: 100%;
+    background: gray;
+    color: white;
+    justify-content: center;
+    bottom: 0;
+
 }
 
-.login-form{
+#logo {
+    width: 40%;
+}
+
+.login-form {
     max-width: 30%;
 }
 
-.img{
+.img {
     width: 15%;
 }
 
-video{
+video {
     max-width: 100%;
     max-height: 50%;
 }
 
-.img1{
+.img1 {
     width: 70%;
 }
 
 
-.number{
+.number {
     width: 50%;
 }
 
-.text{
-   height: 50%;
+.text {
+    height: 50%;
 }
-.user{
+
+.user {
     width: 100%;
 }
+

@@ -1,9 +1,9 @@
 <template>
   <div>
-    <navigation />
-    <template v-if="sing">
+    <navigation  @logoffnnav="sing=$emit" v-bind:logo="logoff"/>
+    <template v-if="sing===''|| sing===true">
       <div  class="container p-3 justify-content-center login-form">
-        <login @singin="sing=$event"/>
+        <login @singin="sing=$event" />
       </div>
     </template>  
       <template v-else>
@@ -27,12 +27,25 @@ export default {
   },
   data() {
     return {
-      sing: true,
+      sing: "",
+      logoff: ""
     };
   },
+  methods:{
+    nav() {
+      if(this.sing === ""){
+        this.logoff = false
+        console.log('app es vacio')
+      }
+      else{
+        this.logoff = true
+        console.log('app es no esvacio')
+      }
+      
+    }
+  },
+  mounted(){
+    this.nav()
+  }
 };
 </script>
-
-<style scoped>
-  
-</style>
