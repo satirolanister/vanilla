@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="mx-3 my-1">
     <template v-if="redirectCourse">
       <div v-for="user of users" :key="user.id">
         <div class="row bg-primary">

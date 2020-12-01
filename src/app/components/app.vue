@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navigation  @logoffnnav="sing=$emit" v-bind:logo="logoff"/>
+    <navigation  @logoffnnav="sing=$emit" :v-bind:logo="nav"/>
     <template v-if="sing===''|| sing===true">
       <div  class="container p-3 justify-content-center login-form">
         <login @singin="sing=$event" />
@@ -17,6 +17,7 @@ import navigation from "./layout/navigation.vue";
 import foot from "./layout/foot.vue";
 import login from "./view/login/login.vue";
 import home from "./view/home/home.vue"
+import {EventBus} from "../services/bus.js"
 
 export default {
   components: {
@@ -27,25 +28,17 @@ export default {
   },
   data() {
     return {
-      sing: "",
-      logoff: ""
+      sing: true,
+      loginNav: true
     };
   },
-  methods:{
-    nav() {
-      if(this.sing === ""){
-        this.logoff = false
-        console.log('app es vacio')
-      }
-      else{
-        this.logoff = true
-        console.log('app es no esvacio')
-      }
+  computed:{
+    nav: function () {
+      EventBus.$on('singinNav', loginNav =>{
+        this.loginNav = this.sing;
+      })
+    }
       
     }
-  },
-  mounted(){
-    this.nav()
-  }
 };
 </script>

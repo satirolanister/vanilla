@@ -16,7 +16,7 @@
     </div>
 </template>
 <script>
-
+import { EventBus } from '../../../services/bus.js';
 export default {
     data(){
         return{
@@ -27,7 +27,7 @@ export default {
         login(){
             this.ingreso=false;
             this.$emit('singin',this.ingreso);
-            console.log('login', this.ingreso)
+            EventBus.$emit('singinNav',this.ingreso);
         }
     }
     

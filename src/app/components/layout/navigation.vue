@@ -4,7 +4,7 @@
       <div id="brand" class="col-10">
         <a class="navbar-brand" href="/"><img id="logo" src="/../media/img/gcfglobal-color.png" alt="" /></a>
       </div>
-      <template v-if="logoff">
+      <template v-if="i">
       <div id="close" class="col-2">
         <button id="close" type="button" @click="logOff()" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div> 
@@ -13,11 +13,13 @@
   </div>
 </template>
 <script>
-  export default {
-    props: ["logo"],
+import {EventBus} from "../../services/bus.js"
+export default {
+    props: ['logo'],
     data() {
       return {
-        logoff: this.logo
+        logoff: '',
+        i:this.logo
       };
     },
     methods: {
@@ -25,12 +27,15 @@
         this.logoff = true;
         this.$emit('logoffnnav', this.logoff);
       },
-      viewpro(){
-        console.log("nav ",this.logoff, "props", this.logo)
+      logOn(){
+        EventBus.$on('singinNav', i =>{
+        this.i = this.logo;
+        console.log(`valor logo ${this.i}`);
+      })
       }
     },
     mounted(){
-      this.viewpro()
+      this.logOn();
     }
   };
 </script>
