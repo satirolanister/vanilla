@@ -1,13 +1,13 @@
 <template>
   <div>
-    <navigation  @logoffnnav="sing=$emit" :v-bind:logo="nav"/>
+    <navigation @logoffnnav="sing=$event"/>
     <template v-if="sing===''|| sing===true">
       <div  class="container p-3 justify-content-center login-form">
-        <login @singin="sing=$event" />
+        <login @singin="singin=$event" />
       </div>
     </template>  
       <template v-else>
-        <home/>
+        <router-view />
       </template>
     <foot />
   </div>
@@ -26,19 +26,15 @@ export default {
     login,
     home
   },
+  created : function(){
+    EventBus.$on('singin', (item)=>{
+      this.sing = item;
+    })
+  },
   data() {
     return {
       sing: true,
-      loginNav: true
     };
-  },
-  computed:{
-    nav: function () {
-      EventBus.$on('singinNav', loginNav =>{
-        this.loginNav = this.sing;
-      })
-    }
-      
-    }
+  }
 };
 </script>

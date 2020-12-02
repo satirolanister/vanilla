@@ -1,21 +1,20 @@
 <template>
-  <div class="mx-3 my-1">
+  <div class="mx-3 mt-3">
     <template v-if="redirectCourse">
       <div v-for="user of users" :key="user.id">
-        <div class="row bg-primary">
-          <div class="col-1">
-            <img src="/../media/img/logo.jpg" alt="" class="rounded-circle border border-primary d-block user" />
-          </div>
-          <div class="col-10 ">
+        <div class="d-block p-2 bg-primary text-white">
+          <div class="col-10">
             <h1 class="text-white">
               Bienvenido
               <strong>{{ user.firstname + " " + user.lastname }}</strong>
             </h1>
           </div>
         </div>
-        <h2 class="text-info mt-2"><strong>Cursos Inscriptos</strong></h2>   
+        <div class="d-block p-2 text-info mt-2">
+          <h2><strong>Cursos Inscriptos</strong></h2>   
+        </div>
         <div class="row mt-3">       
-          <div v-for="enroll of enrolls" :key="enroll.course" class="card mt-2 col-4 mx-2">
+          <div v-for="enroll of enrolls" :key="enroll.course" class="card mt-2 col-2 mx-2">
             <div class="card-body">
               <h4 class="card-title">{{ enroll.course }}</h4>
               <hr />
