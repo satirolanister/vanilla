@@ -9,7 +9,7 @@
       <template v-else>
         <router-view />
       </template>
-    <foot />
+    <foot/>
   </div>
 </template>
 <script>

@@ -1,18 +1,18 @@
 <template>
-  <div class="container">
+  <div class="container a1 my-5">
     <h1>Números en inglés</h1>
     <hr />
     <h2 class="my-2">Números cardinales en inglés</h2>
     <hr />
     <div class="mt-4">
       <video controls>
-        <source src="" type="video/mp4" />
+        <source src="/../media/video/f_3wseayndc.mp4" type="video/mp4" />
       </video>
     </div>
     <div class="row mt-5">
       <img
         class="number col-6"
-        src=""
+        src="/../media/img/cardinal-numbers.png"
         alt="Ejemplo de números cardinales"
       />
       <hr />
@@ -65,7 +65,7 @@
       </p>
       <img
         class="img1 col-6"
-        src=""
+        src="/../media/img/cifras_1.png"
         alt="Imagen ejemplo de las cifras."
       />
       <div class="mx-2 card col-4">
@@ -315,7 +315,7 @@
         and nineteen
       </p>
     </div>
-    <div class="mt-4">
+    <div class="mt-4 mb-5">
       <h2>Millón:</h2>
       <hr />
       <p>

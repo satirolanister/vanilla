@@ -14,7 +14,7 @@
           <h2><strong>Cursos Inscriptos</strong></h2>   
         </div>
         <div class="row mt-3">       
-          <div v-for="enroll of enrolls" :key="enroll.course" class="card mt-2 col-2 mx-2">
+          <div v-for="enroll of enrolls" :key="enroll.course" class="card mt-2 overflow-auto col-2 mx-3">
             <div class="card-body">
               <h4 class="card-title">{{ enroll.course }}</h4>
               <hr />
@@ -26,12 +26,12 @@
                   <p>{{ course.description }}</p>
                   <hr />
                   <div>
-                    <p class="text-info text-center" v-if="enroll.status === 'passed'">
-                     <strong>Estado:</strong> Aprobado
-                    </p>
-                    <p class="text-danger text-center" v-if="enroll.status === 'failed'">
-                     <strong class="text-">Estado:</strong> Reprobado
-                    </p>
+                    <div v-if="enroll.status === 'passed'">
+                     <strong>Estado: <p class="text-info text-center">Aprobado</p></strong>  
+                    </div>
+                    <div  v-if="enroll.status === 'failed'">
+                     <strong>Estado: <p class="text-danger text-center">Reprobado</p></strong> 
+                    </div>
                   </div>
                 </div>
               </div>
@@ -44,7 +44,7 @@
       </div>
     </template>
     <template v-else>
-      <router-view />
+      <router-view class="my-5" />
     </template>
   </div>
 </template>
