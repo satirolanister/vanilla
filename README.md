@@ -21,19 +21,28 @@ en caso de no contar con el node desde este link se puede descargar https://node
  Todo el proyecto se crea con tecnológias javascript.
     
     Backend
-    --------
     Es la parte que se encarga de la lógica de la aplicación.
     
     Frontend
-    --------
     Es la parte que se encarga de presentar los datos al usuario que una manera comoda, 
     es la capa de presentación del aplicativo.
+
+
+# Acceso
+ 
+   Aqui se presentan los endpoint del apirest 
     
- # Acceso
+  1)  Acceso a datos de usuarios.
+  
+    ## URL http://localhost:3000/api/users
     
-    Acceso a datos de usuarios 
+    En esta ruta o endpoint se pude visualizar la información de users en formato json.
     
-    http://localhost:3000/api/users  
+  2) Acceso a datos de cursos.
+  
+    ## URL http://localhost:3000/api/courses
+    
+    En esta ruta o endpoint se pude visualizar la información de courses en formato json.
     
       
     
