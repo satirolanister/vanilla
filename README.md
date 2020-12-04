@@ -38,17 +38,23 @@ en caso de no contar con el node desde este link se puede descargar https://node
     
     En esta ruta o endpoint se pude visualizar la información de users en formato json.
     
+    ![user](https://user-images.githubusercontent.com/26187431/101207368-88725a80-363e-11eb-8737-2ad408b51fba.PNG)
+    
   2) Acceso a datos de cursos.
   
     ## URL http://localhost:3000/api/courses
     
     En esta ruta o endpoint se pude visualizar la información de courses en formato json.
+    
+    ![courses](https://user-images.githubusercontent.com/26187431/101207365-87d9c400-363e-11eb-8ed5-22da3ad5e4ad.PNG)
   
   3) Acceso a relación users y course
   
     ## URL http://localhost:3000/api/enroll
     
     En esta ruta o endpoint se puede visualizar la información de las relaciones entre users y course.
+    
+    ![enroll](https://user-images.githubusercontent.com/26187431/101207367-88725a80-363e-11eb-98f7-8d2b5dfaf1df.PNG)
     
       
     
