@@ -1,5 +1,9 @@
 <template>
-  <div class="container a1 my-5">
+  <div class="container a1 my-2">
+    <div class="mb-2">
+      <button class="btn btn-light">volver</button>
+    </div>
+    
     <h1>Números en inglés</h1>
     <hr />
     <h2 class="my-2">Números cardinales en inglés</h2>
@@ -102,58 +106,6 @@
           </div>
         </div>
       </div>
-    </div>
-    <div>
-      <h2 class="mt-2">Número de dos cifras o decenas:</h2>
-      <p>
-        Los números de dos cifras las dividiremos en dos grupos, verás que así
-        te los aprenderás mejor:
-      </p>
-      <h3>Del 10 al 19:</h3>
-      <hr />
-      <p>
-        Aquí debes tener en cuenta que estas cifras se forman con base en las
-        unidades y se les añade el sufijo o terminación <em>"</em
-        ><em><strong>-teen</strong></em
-        ><em>"</em>, excepto por las números del 10 al 12.
-      </p>
-      <p>
-        10 = <strong><em>Ten&nbsp;</em></strong> &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;11 =
-        <strong><em>Eleven</em></strong
-        ><br />12 = <strong><em>Twelve</em></strong
-        >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;13=
-        <strong><em>Thirteen</em></strong
-        ><br />14 = <strong><em>Fourteen</em></strong
-        >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;15 =&nbsp;<strong
-          ><em>Fifteen</em></strong
-        ><br />16 =&nbsp;<strong><em>Sixteen</em></strong
-        >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;17 =&nbsp;<strong
-          ><em>Seventeen</em></strong
-        ><br />18 =&nbsp;<strong><em>Eighteen&nbsp;</em></strong> &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp;19 =&nbsp;<strong><em>Nineteen</em></strong
-        ><span></span>&nbsp;
-      </p>
     </div>
     <div class="mt-2">
       <h2>Número de dos cifras o decenas:</h2>
@@ -332,3 +284,8 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  
+}
+</script>

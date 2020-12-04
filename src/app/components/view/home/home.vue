@@ -11,40 +11,47 @@
           </div>
         </div>
         <div class="d-block p-2 text-info mt-2">
-          <h2><strong>Cursos Inscriptos</strong></h2>   
+          <h2><strong>Cursos Inscriptos</strong></h2>
         </div>
-        <div class="row mt-3">       
-          <div v-for="enroll of enrolls" :key="enroll.course" class="card mt-2 overflow-auto col-2 mx-3">
-            <div class="card-body">
-              <h4 class="card-title">{{ enroll.course }}</h4>
-              <hr />
-              <div v-for="course of courses" :key="course.id" class="card-text">
-                <div v-if="course.id === enroll.course">
-                  <p>
-                    <strong>{{ course.name }}</strong>
-                  </p>
-                  <p>{{ course.description }}</p>
-                  <hr />
-                  <div>
-                    <div v-if="enroll.status === 'passed'">
-                     <strong>Estado: <p class="text-info text-center">Aprobado</p></strong>  
-                    </div>
-                    <div  v-if="enroll.status === 'failed'">
-                     <strong>Estado: <p class="text-danger text-center">Reprobado</p></strong> 
+        <div class="row mx-1">
+          <div class="card mb-3 col-4 mx-2" v-for="enroll of enrolls" :key="enroll.course" style="max-width: 540px;">
+            <div class="row no-gutters">
+              <div class="col-md-4">
+                <!-- <img src="..." class="card-img" alt="..."> -->
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ enroll.course }}</h5>
+                  <div v-for="course of courses" :key="course.id">
+                    <div v-if="course.id === enroll.course">
+                      <p class="card-text">{{ course.name }}</p>
+                      <p class="card-text"><small>{{ course.description }}</small></p>
+                      <div class="mt-1">
+                        <div v-if="enroll.status === 'passed'">
+                          <p class="card-text"><small class="text-muted">Estado: Aprobado</small></p>
+                        </div>
+                        <div v-if="enroll.status === 'failed'">
+                          <p class="card-text"><small class="text-muted">Estado: Reprobado</small></p>
+                        </div>
+                      </div>
+                      <div class="mt-1">
+                        <button class="btn btn-info btn-block text-white" @click="renderRouter()">
+                          <router-link class="text-white text-decoration-none"
+                            :to="`/content/courses/${enroll.course}`">
+                            Ver contenido</router-link>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <button class="btn btn-info btn-block mt-3 text-white" @click="renderRouter()">
-                <router-link class="text-white text-decoration-none" :to="`/content/courses/${enroll.course}`">Ver contenido</router-link>
-              </button>
             </div>
           </div>
         </div>
       </div>
     </template>
     <template v-else>
-      <router-view class="my-5" />
+      <router-view />
     </template>
   </div>
 </template>
@@ -91,7 +98,6 @@
       },
       renderRouter() {
         this.redirectCourse = false;
-        console.log(this.redirectCourse);
       },
     },
     mounted() {
