@@ -1,6 +1,7 @@
 .footer {
     position: fixed;
     width: 100%;
+    height: 3%;
     background: gray;
     color: white;
     justify-content: center;

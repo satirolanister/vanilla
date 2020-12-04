@@ -11,7 +11,7 @@
       </div>
       <template v-if="logoff===false">
       <div id="close" >
-        <button  @click="logOff()" class="btn btn-danger text-white"><a class="text-white text-decoration-none" href="/">Cerrar sesion</a></button>
+        <button  @click="logOff()" class="btn btn-danger btn-sm text-white"><a class="text-white text-decoration-none" href="/">Cerrar sesion</a></button>
       </div> 
       </template> 
     </nav>
@@ -28,7 +28,9 @@ export default {
     created: function(){
       EventBus.$on('singin', (item)=>{
       this.logoff = item
-    })
+    })},
+    beforeDestroy(){
+      EventBus.$off('singin');
     },
     methods: {
       logOff() {

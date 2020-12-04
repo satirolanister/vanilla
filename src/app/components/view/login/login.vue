@@ -1,8 +1,5 @@
 <template>
     <div class="component-login">
-        <div class="home">
-            
-        </div>
         <div class="form-view">
             <img src="/../media/img/logo.jpg" class="rounded-circle mx-auto d-block m-4 img">
             <br>
@@ -36,7 +33,6 @@
             login: function () {
                 this.ingreso = false;
                 EventBus.$emit('singin', this.ingreso);
-                console.log(this.ingreso)
                 this.ingreso = ''
             }
         },

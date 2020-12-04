@@ -14,12 +14,12 @@
           <h2><strong>Cursos Inscriptos</strong></h2>
         </div>
         <div class="row mx-1">
-          <div class="card mb-3 col-4 mx-2" v-for="enroll of enrolls" :key="enroll.course" style="max-width: 540px;">
+          <div class="card col-xs-12 mb-3 col-4 mx-2" v-for="enroll of enrolls" :key="enroll.course" style="max-width: 540px;">
             <div class="row no-gutters">
               <div class="col-md-4">
                 <!-- <img src="..." class="card-img" alt="..."> -->
               </div>
-              <div class="col-md-8">
+              <div class="col-md-8 col-xs-12">
                 <div class="card-body">
                   <h5 class="card-title">{{ enroll.course }}</h5>
                   <div v-for="course of courses" :key="course.id">
@@ -34,13 +34,12 @@
                           <p class="card-text"><small class="text-muted">Estado: Reprobado</small></p>
                         </div>
                       </div>
-                      <div class="mt-1">
-                        <button class="btn btn-info btn-block text-white" @click="renderRouter()">
-                          <router-link class="text-white text-decoration-none"
-                            :to="`/content/courses/${enroll.course}`">
-                            Ver contenido</router-link>
-                        </button>
-                      </div>
+                      <div class="card-footer">
+                        <router-link @click="renderRouter()"
+                          class=" btn btn-info btn-block text-white text-decoration-none"
+                          :to="`/content/courses/${enroll.course}`">
+                          Ver contenido</router-link>
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -58,6 +57,9 @@
 
 <script>
   import axios from "axios";
+  import {
+    EventBus
+  } from "../../../services/bus.js"
 
   export default {
     data() {
@@ -68,6 +70,14 @@
         estado: {},
         redirectCourse: true,
       };
+    },
+    created: function () {
+      EventBus.$on('back', (item) => {
+        this.redirectCourse = item
+      })
+    },
+    beforeDestroy() {
+      EventBus.$off('back');
     },
     methods: {
       getInfo() {
@@ -99,6 +109,8 @@
       renderRouter() {
         this.redirectCourse = false;
       },
+
+
     },
     mounted() {
       this.getInfo();

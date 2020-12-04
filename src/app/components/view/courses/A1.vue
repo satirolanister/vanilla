@@ -1,7 +1,7 @@
 <template>
   <div class="container a1 my-2">
     <div class="mb-2">
-      <button class="btn btn-light">volver</button>
+      <router-link @click="bHome()" to="/home" class="btn btn-light">volver</router-link>
     </div>
     
     <h1>Números en inglés</h1>
@@ -15,12 +15,12 @@
     </div>
     <div class="row mt-5">
       <img
-        class="number col-6"
+        class="number col-6 col-xs-12"
         src="/../media/img/cardinal-numbers.png"
         alt="Ejemplo de números cardinales"
       />
       <hr />
-      <div class="col-6">
+      <div class="col-6 col-xs-12">
         <p>
           Los números cardinales se usan para contar cosas o expresar
           cantidades.
@@ -285,7 +285,22 @@
   </div>
 </template>
 <script>
+import {EventBus} from "../../../services/bus.js";
 export default {
+  data(){
+    return{
+      bhome:''
+    }
+    
+  },
+  methods:{
+    bHome(){
+      this.bhome=true
+      EventBus.$emit('back', this.bhome);
+      console.log(this.bhome);
+    }
+  },
+  
   
 }
 </script>
