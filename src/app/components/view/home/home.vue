@@ -13,11 +13,16 @@
         <div class="d-block p-2 text-info mt-2">
           <h2><strong>Cursos Inscriptos</strong></h2>
         </div>
-        <div class="row mx-1">
+        <div class="row mx-1 mb-5">
           <div class="card col-xs-12 mb-3 col-4 mx-2" v-for="enroll of enrolls" :key="enroll.course" style="max-width: 540px;">
             <div class="row no-gutters">
-              <div class="col-md-4">
-                <!-- <img src="..." class="card-img" alt="..."> -->
+              <div class="col-md-4 mt-3">
+                <div v-if="enroll.course === 'A1'">
+                  <img src="/../media/img/A1.gif" class="card-img">
+                </div>
+                <div v-if="enroll.course === 'B1'">
+                  <img src="/../media/img/b1.jpg" class="card-img">
+                </div>
               </div>
               <div class="col-md-8 col-xs-12">
                 <div class="card-body">
@@ -36,7 +41,7 @@
                       </div>
                       <div class="card-footer">
                         <router-link @click="renderRouter()"
-                          class=" btn btn-info btn-block text-white text-decoration-none"
+                          class="text-dark text-decoration-none"
                           :to="`/content/courses/${enroll.course}`">
                           Ver contenido</router-link>
                         </div>
