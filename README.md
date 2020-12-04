@@ -43,6 +43,12 @@ en caso de no contar con el node desde este link se puede descargar https://node
     ## URL http://localhost:3000/api/courses
     
     En esta ruta o endpoint se pude visualizar la información de courses en formato json.
+  
+  3) Acceso a relación users y course
+  
+    ## URL http://localhost:3000/api/enroll
+    
+    En esta ruta o endpoint se puede visualizar la información de las relaciones entre users y course.
     
       
     
