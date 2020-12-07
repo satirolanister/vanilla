@@ -15,7 +15,7 @@ en caso de no contar con el node desde este link se puede descargar https://node
   1) node.js https://nodejs.org/en/about/
   2) vue.js https://vuejs.org/v2/guide/
   3) webpack https://webpack.js.org/concepts/
-  4) 
+  4) babel https://babeljs.io/docs/en/
  
 # caracteristicas
   
